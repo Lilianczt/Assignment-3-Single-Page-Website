@@ -1,0 +1,230 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Oswald";
+  font-size: 14px;
+  background-color: #ccc;
+}
+
+.index {
+  background-color: #fff;
+}
+
+.top {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.menu-toggler {
+  background: none;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  outline: none;
+  z-index: 99;
+  top: 10px;
+  left: 10px;
+  /* display: none; */
+}
+
+.menu-toggler span {
+  display: block;
+  height: 3px;
+  background-color: #000;
+  margin: 6px 0;
+  position: relative;
+  transition: 0.3s linear;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -ms-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+}
+
+.menu-toggler-1 {
+  background: none;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  z-index: 99;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  /* display: none; */
+}
+
+.menu-toggler-1 span {
+  display: block;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+  position: relative;
+  transition: 0.3s linear;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -ms-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+}
+
+.navbar-menu {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+  top: 0;
+  right: -100vw;
+  max-width: 300px;
+  padding: 80px 30px;
+  transition: 0.4s linear;
+  -webkit-transition: 0.46s linear;
+  -moz-transition: 0.46s linear;
+  -ms-transition: 0.46s linear;
+  -o-transition: 0.46s linear;
+}
+
+.navbar-menu a {
+  display: block;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  transition: 0.6s liner;
+  -webkit-transition: 0.6s liner;
+  -moz-transition: 0.6s liner;
+  -ms-transition: 0.6s liner;
+  -o-transition: 0.6s liner;
+}
+
+/* .sticky {
+  background-color: #fff;
+  padding: 15px 0;
+}
+
+.sticky .navbar-menu a {
+  color: #124eeb;
+}
+
+.sticky .menu-toggler {
+  background-color: #000;
+} */
+
+.navbar-menu.active {
+  left: 0;
+  z-index: 9999;
+}
+
+/* .menu-toggler.active span:nth-child(1) {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  top: 4px;
+}
+
+.menu-toggler.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggler.active span:nth-child(3) {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  bottom: 14px;
+} */
+
+.txt-1 {
+  padding: 20px 30px;
+}
+.txt-2 {
+  padding: 0px 30px;
+  font-size: 36px;
+  font-weight: 700;
+  margin-left: 100pt;
+}
+.txt-3 {
+  padding: 0px 30px;
+  font-size: 36px;
+  font-weight: 700;
+  
+}
+
+.txt-p {
+  font-size: 20px;
+  padding: 10px 30px;
+}
+
+.index img {
+  width: 360px;
+  padding: 60px 0;
+}
+
+button {
+  outline: none;
+  border: none;
+  color: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.what {
+  background-color: #000;
+  color: #fff;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}
+
+hr {
+  border-top: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+#whatyouwillneed{
+padding: 10%;
+padding-top: 0%;
+}
+#whatyouwillneed>div>div>div>img{
+  width: 100%;
+  padding-top:10px;
+}
+#whatyouwillneed>div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+}
+#whatyouwillneed>div>div{
+  min-width: 0;
+}
+#whatyouwillneed>div>div>div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height:100%;
+}
+#whatyouwillneed>div>div>div>div{
+  padding: 0;
+}
+#SD>div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}

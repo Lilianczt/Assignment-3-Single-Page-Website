@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Python Raspberry Pi SenseHat</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.0.0.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/Oswald/Oswald.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/xin.css">
+        <style>
+            #box{
+      box-sizing: border-box;
+      width: 100%;
+      overflow: hidden;
+    }
+    #box2{
+      width: 200%;
+      display: flex;
+      flex-direction: row;
+      transition: 0.3s;
+    }
+    #box2>li{
+      width: 50%; 
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+ 
+    #box2>li>div{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    #box2>li>div>div{
+        width: 50%;
+    }
+    .btn{
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      border: 1px solid #000;
+    }
+    #circle{
+    position: absolute;
+    top: 55%;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    }
+        </style>
+</head>
+
+<body>
+    <!-- RPI LOGO -->
+    <i id="sxin"></i>
+
+    <div class="container-fluid index">
+        <div class="row">
+            <div class="container top">
+                <button class="menu-toggler">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="navbar-menu">
+                    <button class="menu-toggler-1">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <a href="#what">What you will need</a>
+                    <a href="#set">Set up your<br />Raspberry Pi</a>
+                    <a href="#python">Python Code</a>
+                    <a href="#video">Demo video</a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="txt-1">
+                            Display text on
+                        </h2>
+                    </div>
+                    <div class="col-md-12">
+                        <h3 class="txt-3">
+                            Raspberry Pi SenseHat
+                        </h3>
+                    </div>
+                    <div class="col-md-12 text-center" >
+                      <div id="box" style="position: relative;">
+                        <div id="box2">
+                            <li>
+                                <img src="images/RPILOGO.png" alt="">
+                                <div>
+                                    <div>
+                                        <h2>What is Raspberry Pi?</h2>
+                                        <h4>The Raspberry Pi is a low cost, credit-card sized computer that plugs into a computer monitor or TV. It is used to explore computing, and to learn how to program in languages.
+                                        </h4>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/SENSEHAT.png" alt="">
+                                <div>
+                                    <div>
+                                        <h2>What is SenseHat?</h2>
+                                        <h4>The Sense HAT is an add-on board for the Raspberry Pi, made especially for the Astro Pi competition. The board allows you to make measurements of temperature, humidity, pressure, and orientation, and to output information using its built-in LED matrix.</h4>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                        </div>
+                      <div id="circle">
+                        <div>
+                            <button class="btn"></button>
+                            <button class="btn"></button>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <h3 class="txt-2">
+                        </h3>
+                    </div>
+                    <div class="col-md-12">
+                        <p class="txt-p">
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid what" id="what">
+        <div class="row">
+            <div class="txt-1">
+                <h2>What you will need.</h2>
+            </div>
+            <div class="col-md-12" id="whatyouwillneed">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card" style="background:none;">
+                            <img src="images/MONITOR.png" class="card-img-top img-fluid" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center" style="font-size: 20px;">MONITOR</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="background:none;">
+                            <img src="images/Charger.png" class="card-img-top img-fluid" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center" style="font-size: 20px;">CHARGER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="background:none;">
+                            <img src="images/SD CARD.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center" style="font-size: 20px;">SD CARD</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="background:none;">
+                            <img src="images/SH.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center" style="font-size: 20px;">SENSEHAT</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-3">
+                        <div class="card" style="background:none;">
+                            <img src="images/KEYBOARD.png" class="card-img-top img-fluid" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center" style="font-size: 20px;">KEYBOARD</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="background:none;">
+                            <img src="images/HDMI.png" class="card-img-top img-fluid" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center" style="font-size: 20px;">HDMI CABLE</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="background:none;">
+                            <img src="images/MOUSE.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center" style="font-size: 20px;">MOUSE</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="background:none;">
+                            <img src="images/RPI.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center" style="font-size: 20px;">RASPBERRY PI 3B+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid index" id="set">
+        <div class="row"> 
+            <div class="col-md-12">
+                <h2 class="txt-1">
+                   
+                </h2>
+            </div>
+            <div class="col-md-12">
+                <h2 class="txt-1">
+                    SET UP YOUR RASPBERRY PI
+                </h2>
+            </div>
+           
+            <div class="col-md-12">
+                <hr>
+            </div>
+
+            <div class="col-md-12">
+                <h3 class="txt-2">
+                    PLug in the SenseHat.
+                </h3>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <img src="images/SENSEHAT.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <hr>
+            </div>
+
+            <div class="col-md-12">
+                <h3 class="txt-2">
+                    Insert Micro SD Card in the back.
+                </h3>
+            </div>
+            <div class="col-md-12">
+                <div class="row" id="SD">
+                    <div class="col-md-6">
+                        <img src="images/SD CARD.png" alt="">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="images/RPI.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <hr>
+            </div>
+            <div class="col-md-12">
+                <h3 class="txt-2">
+                    PLug in the HDMI cable.
+                </h3>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <img src="images/HDMI.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <hr>
+            </div>
+            </div>
+            <div class="col-md-12">
+                <h3 class="txt-2">
+                    PLug in a USB Mouse.
+                </h3>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <img src="images/MOUSE.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <hr>
+            </div>
+            <div class="col-md-12">
+                <h3 class="txt-2">
+                    PLug in a USB Keyword.
+                </h3>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <img src="images/KEYBOARD.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <hr>
+            </div>
+            <div class="col-md-12">
+                <h3 class="txt-2">
+                    PLug in the Charger.
+                </h3>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <img src="images/Charger.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <hr>
+            </div>
+            <div class="col-md-12">
+                <h3 class="txt-2">
+                    Connect the Monitor.
+                </h3>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <img src="images/MONITOR.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid what" id="python" style="padding:50px 50px;">
+        <div class="line"></div>
+        <div class="col-md-12">
+            <h2 class="txt-1" style="padding-left:0;">
+                Python Code
+            </h2>
+        </div>
+        
+        <div class="container" >
+            <p  style="font-size: 20px;font-weight: 10;">   </p>
+            <p  style="font-size: 20px;font-weight: 10;">from sense_hat import SenseHat</p>
+            <p  style="font-size: 20px;font-weight: 10;">black =（0，0，0）</p>
+            <p  style="font-size: 20px;font-weight: 10;">white = (255,255,255)</p>
+            <p  style="font-size: 20px;font-weight: 10;">def pushed_left (event):
+                sense.show_message(“Hello”,text_colour=black, back_colour=white,scroll_speed=0.05)</p>
+            <p  style="font-size: 20px;font-weight: 10;">def pushed_right (event):
+                sense.show_message(“Hello”,text_colour=white, back_colour=black,scroll_speed=0.05)</p>
+            <p  style="font-size: 20px;font-weight: 10;">sense=SenseHat( )
+                sense.stick.direction_left =pushed_left</p>
+            <p  style="font-size: 20px; font-weight: 10;">sense.stick.direction_right =pushed_right</p>
+        </div>
+    </div>
+
+    <div class="container-fluid what" id="video" style="padding:50px 50px;">
+        <div class="line"></div>
+        <div class="col-md-12">
+            <h2 class="txt-1" style="padding-left:0;">
+                Let's set your own display!
+            </h2>
+        </div>
+        <div class="col-md-12">
+            <video controls muted style="width: 100%;">
+                <source src="video/pi.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap-4.0.0.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script>
+        $(function () {
+
+            $('.menu-toggler').click(function () {
+                $(this).toggleClass('active');
+                $('.navbar-menu').toggleClass('active');
+            });
+
+
+            $('.menu-toggler-1').click(function () {
+                $('.navbar-menu').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+
+        });
+    </script>
+
+
+
+</body>
+
+</html>
+<script>
+    
+  let box2 = document.getElementById('box2');
+  let btn = document.getElementsByClassName('btn'); 
+  let left = 0;
+  let time;
+  console.log(btn)
+  function dome() {
+    for(var k = 0; k < btn.length; k ++) {
+              btn[k].style.background = 'none';
+    }
+  }
+  function a() {
+    time = setInterval(function () {
+          box2.style.marginLeft = left + "%";
+          dome()
+          if (left <= -100) {
+              left = 0;
+              btn[left].style.background = '#000';
+          }else {
+              left -= 100;
+              let b=left;
+              b=Math.abs(b)/100;
+              btn[b].style.background="#000"
+          }
+      },3000)
+  }
+  a(); 
+  for (var i = 0; i < btn.length; i ++) {
+      btn[i].index = i;
+      btn[i].onclick = function () {
+        dome()
+          btn[this.index].style.background = '#000';
+          clearInterval(time);
+          if (this.index == 100) {
+            left -= 0;
+            console.log(this.index)
+            console.log(left)
+          }else {
+            left = this.index;
+            console.log(this.index)
+            console.log(left)
+            left = parseInt('-' +left * 100)
+          }
+          box2.style.marginLeft = left + "%";
+          a();
+      }
+  }
+</script>
+<script src="js/xin.js"></script>

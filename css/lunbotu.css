@@ -1,0 +1,47 @@
+
+#banner2{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+#lunbotu{
+  width: 400%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: auto;
+  transition: 0.35s;
+}
+#lunbotu>img{
+  width: 25%;
+  height: auto;
+}
+#banner_btn{
+  width: 100%;
+  position: absolute;
+  top: 92%;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  transition: 0.3s;
+  opacity: 0.5;
+}
+#banner_btn:hover{
+  opacity: 1;
+}
+#banner_btn>li{
+  box-sizing: border-box;
+  margin-left: 20px;
+  z-index: 999;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+#banner_btn>li:first-child{
+  background: #fff;
+  color: #000;
+}
